@@ -30,6 +30,7 @@ float Vector2::magnitude() const {
 
 void Vector2::normalize() {
 	float mag = Vector2::magnitude();
+	
 	if (mag > 0.00001) {
 		x = x / mag;
 		y = y / mag;
@@ -66,6 +67,7 @@ Vector2 Vector2::Scale(const Vector2& a, const Vector2& b) {
 Vector2 Vector2::LerpUnclamped(const Vector2& a, const Vector2& b, float t) {
 	if (t < 0) t = 0;
 	if (t > 1) t = 1;
+	
 	return Lerp(a, b, t);
 }
 
@@ -95,8 +97,9 @@ Vector2 Vector2::MoveTowards(const Vector2& current, const Vector2& target, floa
 	if (distance < maxDistanceDelta || distance == 0) {
 		return target;
 	}
-	else
+	else{
 		return current + (target - current) / distance * maxDistanceDelta;
+	}
 }
 
 Vector2 Vector2::Perpendicular(const Vector2& inDirection) {
@@ -128,18 +131,24 @@ float Vector2::Cross(const Vector2& a, const Vector2& b) {
 
 float Vector2::AngleFullDegrees(const Vector2& a, const Vector2& b) {
 	float angleInDegrees = Vector2::AngleInDegrees(a, b);
-	if (Vector2::Cross(a, b) > 0)
+	
+	if (Vector2::Cross(a, b) > 0){
 		return 360 - angleInDegrees;
-	else
+	}
+	else{
 		return  angleInDegrees;
+	}
 }
 
 float Vector2::AngleFullRadians(const Vector2& a, const Vector2& b) {
 	float angleInRadians = Vector2::AngleInRadians(a, b);
-	if (Vector2::Cross(a, b) > 0)
+	
+	if (Vector2::Cross(a, b) > 0){
 		return 2 * PI - angleInRadians;
-	else
+	}
+	else{
 		return angleInRadians;
+	}
 }
 
 void  Vector2::RotatedRadians(float angle) {
