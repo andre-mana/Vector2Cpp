@@ -5,7 +5,7 @@
 
 Math library that handles 2D positions and vectors with floating-point coordinates. 
 
-### 2 Setup 
+## 2. Setup 
 Add the Vector2Lib folder to your project. This folder contains the Vector2.cpp and Vector2.h files. Ensure that the folder or the path to Vector2.h is added to your project's include path so that #include "Vector2.h" can be resolved correctly.
 
 ## 3. Documentation
@@ -17,7 +17,7 @@ Add the Vector2Lib folder to your project. This folder contains the Vector2.cpp 
 |Vector2()  |Constructs a new `Vector2` with all components set to 0.
 |Vector2 ( float x, float y )| Constructs a new `Vector2` with the given x and y coordinates.
 
-#### 3.2 Static Constants 
+### 3.2 Static Constants 
 
 |||
 | ------------- | ------------- |
@@ -27,7 +27,7 @@ Add the Vector2Lib folder to your project. This folder contains the Vector2.cpp 
 |up|  Vector2(0, 1)|
 |zero|  Vector2(0, 0)|
 
-#### 3.3 Public Methods
+### 3.3 Public Methods
 
 ||| |
 | ------------- | ------------------------------- | ------------- |
@@ -37,7 +37,7 @@ Add the Vector2Lib folder to your project. This folder contains the Vector2.cpp 
 |void| RotatedRadians(float angle) | Rotates this vector by the specified angle in radians.
 |float| sqrMagnitude() | Returns the squared length of this vector.
 
-#### 3.4 Static Methods
+### 3.4 Static Methods
 
 ||| |
 | ------------- | ------------------------------- | ------------- | 
@@ -62,7 +62,7 @@ Add the Vector2Lib folder to your project. This folder contains the Vector2.cpp 
 |Vector2| Reflect(Vector2 inDirection, Vector2 inNormal)| Returns the result of reflecting the vector `inDirection` off the surface defined by `inNormal`.
 |Vector2| Scale(const Vector2& a, const Vector2& b)| Multiplies two vectors element-wise.
 
-#### 3.5 Operators
+### 3.5 Operators
 
 || |
 | ------------- | ------------- |
@@ -79,13 +79,13 @@ Add the Vector2Lib folder to your project. This folder contains the Vector2.cpp 
     Vector2 v1(3,4); 
     Vector2 v2(7,8);
 
-##### 3.6.2 Calculting the distance between two points:
+#### 3.6.2 Calculting the distance between two points:
     float distance = Vector2::Distance(v1,v2); 
 
-##### 3.6.3 Calculating the angle between two points:
+#### 3.6.3 Calculating the angle between two points:
     float angleDeg = Vector2::AngleFullDegrees(Vector2::right,Vector2::up);
 
-## 5 Examples of Using This Library for Games:
+## 5. Examples of Using This Library for Games:
 
 There are many use cases for Vector2 functions. Here are a few examples:
 
